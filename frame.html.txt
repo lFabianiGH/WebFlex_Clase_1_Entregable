@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas' lair</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="inicio">Lucas' lair</h1>
+
+        <p>Código, tecnología y mates... MUCHOS MATES</p>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#about-me">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+       </main>
+
+    <footer>
+        <p>&copy; 2026 Lucas' lair. Todos los derechos reservados.</p>
+        <p>Seguime en redes sociales:</p>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com/lu.ma.fabiani" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/lu.ma.fabiani" target="_blank">Instagram</a></li>
+                <li><a href="https://github.com/lFabianiGH" target="_blank">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/lmfabiani/" target="_blank">LinkedIn</a></li>
+                <li><a href="#" target="_blank">Canal de Telegram</a> (en breve disponible)</li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
