@@ -1,0 +1,93 @@
+/* 
+  PASO 1: Asegúrate de haber enlazado este archivo en tu HTML con:
+  <link rel="stylesheet" href="styles.css">
+  
+  PASO 2: Pega aquí los estilos para tu sitio.
+*/
+/* 1. Define tu paleta de colores usando variables HSL en :root */
+:root {
+  --primary-color: hsl(235, 92%, 95%); /* Azul */
+  --secondary-color: hsl(234, 100%, 27%);  
+  --bg-light: hsla(234, 100%, 82%, 0.5);
+}
+
+
+body {
+    /* TODO: Aplica aquí la font-family que elegiste de Google Fonts */
+    /* No olvides incluir una fuente genérica como 'sans-serif' como respaldo */
+    font-family: "Inter", sans-serif;
+    background-color: var(--bg-light)
+
+}
+
+header {
+  /* 3. Crea un fondo con un gradiente lineal que vaya de primary a secondary */
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  color: var(--secondary-color);
+  padding: 3rem;
+  border-radius: 0.8rem;
+}
+
+nav {
+    background-color: hsl(234, 100%, 95%, 0.6);
+    padding: 0.1rem;
+    border-radius: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav ul li {
+  list-style: none;
+  border-radius: 0.2rem;
+  border: 3px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+nav ul li:hover {
+  background-color: var(--bg-light); 
+  border: 3px solid var(--bg-light);   
+}
+section {
+  /* 4. Usa un color con transparencia (hsla o rgba) para un fondo suave */
+  background-color: hsl(234, 100%, 75%, 0.5);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+    /* TODO: Configura un font-size grande (ej. 2.5rem) y font-weight: 700 */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+p {
+    /* TODO: Usa un font-size de 1rem y un font-weight: 400 para los párrafos */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 90ch;
+}
+
+
+/* TODO: Personaliza los enlaces (a) para que resalten */
+a {
+    color: #062a58;
+    /* Color azul para los enlaces */
+    font-weight: 500;
+    /* Peso de fuente medio */
+    text-decoration: underline solid;
+}
+
+a:hover {
+    font-weight: 650;
+    /* Cambia el peso de la fuente al pasar el mouse */
+    color: #0c47a1;
+    /* Color más oscuro al pasar el mouse */
+    background-color: var(--bg-light);
+    
+}
