@@ -4,15 +4,28 @@
   
   PASO 2: Pega aquí los estilos para tu sitio.
 */
+
 /* 1. Define tu paleta de colores usando variables HSL en :root */
 :root {
-  --primary-color: hsl(235, 92%, 95%);
-  /* Azul */
-  --secondary-color: hsl(234, 100%, 27%);
+  --primary-color: #000e8a ;
+  --secondary-color: #e7e8feea;
+  --accent-color: #0753c5;
   --bg-light: hsla(234, 100%, 82%, 0.5);
 }
 
+/* 2. Aplica estilos al encabezado */
+header {
+  /* Crea un fondo con un gradiente lineal que vaya de primary a secondary */
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 0.8rem;
+  h1 {
+    color: var(--secondary-color);
+  }
+}
 
+/* 3. Aplica estilos al cuerpo del documento */
 body {
   /* TODO: Aplica aquí la font-family que elegiste de Google Fonts */
   /* No olvides incluir una fuente genérica como 'sans-serif' como respaldo */
@@ -20,14 +33,25 @@ body {
   background-color: var(--bg-light)
 }
 
-header {
-  /* 3. Crea un fondo con un gradiente lineal que vaya de primary a secondary */
-  background: linear-gradient(var(--primary-color), var(--secondary-color));
+/* 4. Aplica estilos al pie de página */
+footer {
+  background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: 1rem;
+  text-align: center;
   border-radius: 0.8rem;
 }
 
+section {
+  /* 4. Usa un color con transparencia (hsla o rgba) para un fondo suave */
+  background-color: hsl(234, 100%, 75%, 0.5);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+
+/* 5. Aplica estilos a la barra de navegación */
 nav {
   background-color: hsl(234, 100%, 95%, 0.6);
   padding: 0.1rem;
@@ -44,7 +68,7 @@ nav ul {
   justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
-
+  
 }
 
 nav ul li {
@@ -52,33 +76,7 @@ nav ul li {
   border-radius: 0.2rem;
 }
 
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-}
-
-figcaption {
-  font-size: 0.8rem;
-  color: var(--secondary-color);
-  margin-top: 0.5rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-section {
-  /* 4. Usa un color con transparencia (hsla o rgba) para un fondo suave */
-  background-color: hsl(234, 100%, 75%, 0.5);
-  border-radius: 0.8rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-
+/* 6. Aplica estilos a los encabezados y párrafos */
 h1 {
   /* TODO: Configura un font-size grande (ej. 2.5rem) y font-weight: 700 */
   font-size: 2.5rem;
@@ -93,6 +91,7 @@ p {
   max-width: 90ch;
 }
 
+/* Aplica estilos específicos para el texto del <header>*/
 p.texto-header {
   background-color: hsl(234, 100%, 80%, 0.6);
   font-size: 1.2rem;
@@ -106,16 +105,39 @@ p.texto-header {
   border-width: 3px;
 }
 
-/* TODO: Personaliza los enlaces (a) para que resalten */
+/* TODO: Personaliza los enlaces (a) para que resalten cuando el usuario pasa el mouse sobre ellos */
 a {
-  color: #062a58;
+  color:var(--primary-color);
   /* Color azul para los enlaces */
   font-weight: 500;
   /* Peso de fuente medio */
-  text-decoration: underline solid;
+  text-decoration: underline dotted;
 }
 
 a:hover {
-  color: #0753c5;
   /* Color más oscuro al pasar el mouse */
+  color: var(--accent-color);
+  text-decoration: underline solid;
 }
+
+/* 7. Aplica estilos a las imágenes y figuras */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+figcaption {
+
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
