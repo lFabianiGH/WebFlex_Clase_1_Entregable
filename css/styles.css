@@ -5,6 +5,7 @@
   PASO 2: Pega aquí los estilos para tu sitio.
 */
 
+
 /* 1. Define tu paleta de colores usando variables HSL en :root */
 :root {
   --primary-color: #000e8a ;
@@ -62,16 +63,15 @@ nav {
   border-width: 3px;
 }
 
-nav ul {
+nav > ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
-  
 }
 
-nav ul li {
+nav > ul > li {
   list-style: none;
   border-radius: 0.2rem;
 }
@@ -88,9 +88,15 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: normal;
+}
+
+body > p {
   max-width: 90ch;
 }
 
+footer > p{
+  max-width: none;
+}
 /* Aplica estilos específicos para el texto del <header>*/
 p.texto-header {
   background-color: hsl(234, 100%, 80%, 0.6);
