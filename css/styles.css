@@ -88,13 +88,18 @@ p {
   font-size: 1rem;
   font-weight: 400;
   line-height: normal;
-}
-
-body > p {
   max-width: 90ch;
 }
 
-footer > p{
+ol {
+  max-width: 90ch;
+}
+
+ul {
+  max-width: 90ch;
+}
+
+footer > p {
   max-width: none;
 }
 /* Aplica estilos específicos para el texto del <header>*/
