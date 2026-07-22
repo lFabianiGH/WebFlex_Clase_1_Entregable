@@ -1,0 +1,238 @@
+/* 
+  stylesheet: styles.css
+*/
+
+
+/*
+Colores base: 
+  - Incluye color primario, secundario y de acento según lo solicitado
+  - Incluí por decisión propia par homogeneizar el color de fondo por defecto
+*/
+
+:root {
+  --primary-color: #000e8a ;
+  --secondary-color: #e7e8feea;
+  --accent-color: #0753c5;
+  --bg-light: hsla(234, 100%, 82%, 0.5);
+}
+
+/* Estilos de la sección Header */
+header {
+  background: linear-gradient(var(--primary-color), var(--secondary-color)); 
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
+
+/* Aplica  estilos al H1 específicamente ubicado en el Header */
+header > h1 {
+  color: var(--secondary-color);
+}
+
+/* Estilos al Body */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-light)
+}
+
+/* Estilos al Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.8rem;
+}
+
+/* Aplica estilos a las <section> */
+section {
+  background-color: hsl(234, 100%, 75%, 0.5);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* Aplica estilos a las <article> */
+article {
+  background-color: hsl(234, 100%, 95%, 0.5);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+/* Aplica estilos a las listas ordenadas <ol> */
+ol {
+  max-width: 90ch;
+}
+
+/* Aplica estilos a las listas desordenadas <ul> */
+ul {
+  max-width: 90ch;
+}
+
+/* Aplica estilos al <Nav> */
+nav {
+  background-color: hsl(234, 100%, 95%, 0.6);
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+  padding: 3px;
+  border-radius: 0.5rem;
+  border-style: solid none solid none;
+  border-width: 3px;
+}
+
+/* Aplica estilos al <ul> dentro del <nav> específicamente*/
+nav > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  max-width: none;
+}
+
+/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
+nav > ul > li {
+  list-style: none;
+  border-radius: 0.2rem;
+}
+
+/* Aplica estilos al H1 en general */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Aplica estilos al <p> en general */
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 90ch;
+}
+
+/*
+Aplica estilos al <p> dentro del <footer> aunque el <p> independientemente que sea
+hijo, nieto, etc. del <footer>, es sufiente que esté dentro de esa etiqueta.
+*/
+footer p {
+  max-width: none;
+}
+
+/*
+Aplica estilos al <p> que sean hijos directos del <footer> y
+no  anidado dentro de otra etiqueta contenedora.
+*/
+footer > p {
+  text-align: left;
+}
+
+/* Aplica estilos específicos para el texto del <header>*/
+p.texto-header {
+  background-color: hsl(234, 100%, 80%, 0.6);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  max-width: none;
+  padding: 9px;
+  border-radius: 0.5rem;
+  border-style: solid none solid none;
+  border-width: 3px;
+}
+/*
+.bullet y .bullet::before
+
+Aplican estilos a los elementos con la clase "bullet"
+
+lo utilizo para simular los efecto de <ul> sin generar la sobrecarga de esta etiqueta 
+cuando no se trate de listas de elementos atómicos con textos muy cortos.
+
+Pensado para aplicar viñetas a párrafos sobre etiquetas <p> a las que se les asigne la
+clase "bullet
+*/
+.bullet{
+    position: relative;
+    padding-left: 25px;
+}
+
+.bullet::before{
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*
+.lista-ordenada {...} .lista-ordenada p{...} y .lista-ordenada::before {...}
+
+Aplican estilos a los elementos con la clase "lista-ordenada"
+
+lo utilizo para simular los efecto de <ol> sin generar la sobrecarga de esta etiqueta 
+cuando no se trate de listas de elementos que requiera orden y sean  atómicos con textos muy cortos.
+
+Aplicable a listas "paso a paso"
+
+Pensado para aplicar numeración  a párrafos sobre etiquetas <p> a las que se les asigne la
+clase "lista-ordenada¨
+*/
+.lista-ordenada{
+    counter-reset: item;
+}
+
+.lista-ordenada p{
+    counter-increment: item;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 15px;
+}
+
+.lista-ordenada p::before{
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #000000;
+    width: 30px;
+    text-align: right;
+}
+
+
+/* aplica estilos a las etiquetas <a>*/
+a {
+  color:var(--primary-color);
+  font-weight: 500;
+  text-decoration: underline dotted;
+}
+
+/* aplica estilos a las etiquetas <a> cuando el mouse las sobrevuela*/
+a:hover {
+  /* Color más oscuro al pasar el mouse */
+  color: var(--accent-color);
+  text-decoration: underline solid;
+}
+
+/* Aplica estilos a las etiquetas <figure> */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+/* Aplica estilos a las etiquetas <figcaption> */
+figcaption {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+/* Aplica estilos a las etiquetas <img> */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
