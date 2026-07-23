@@ -5,7 +5,7 @@
 
 /*
 Colores base: 
-  - Incluye color primario, secundario y de acento según lo solicitado
+  - Incluye color primario, secundario y de acento según lo solicitado (uso de :root sugerido por Ticher)
   - Incluí por decisión propia par homogeneizar el color de fondo por defecto
 */
 
@@ -31,7 +31,7 @@ header > h1 {
 
 /* Estilos al Body */
 body {
-  font-family: "Inter", sans-serif;
+  font-family:  "Montserrat", sans-serif;
   background-color: var(--bg-light)
 }
 
