@@ -20,13 +20,16 @@ Colores base:
   --secondary-color: #e7e8feea;
   --accent-color: #0753c5;
   --bg-light: hsla(234, 100%, 82%, 0.5);
+  --color-gradiente-desde: #0753c5;
+  --color-gradiente-hasta: #95b4e0;
 }
 
 /* Estilos de la sección Header */
 header {
-  background: linear-gradient(var(--primary-color), var(--secondary-color)); 
+  background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta)); 
   color: var(--primary-color);
   padding: 1rem;
+  margin: 1rem;
   border-bottom: 5px;
   border-radius: 0.8rem;
 }
@@ -47,6 +50,7 @@ footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
   text-align: center;
   border-radius: 0.8rem;
 }
@@ -84,7 +88,7 @@ ul {
 /* Aplica estilos al <Nav> */
 nav {
   background-color: hsl(234, 100%, 95%, 0.6);
-  padding: 20x 0;
+  padding: 2rem;
   border-radius: 0.5rem;
   padding: 3px;
   border-radius: 0.5rem;
@@ -99,6 +103,7 @@ nav > ul {
   justify-content: center;
   gap: 2rem;
   margin-top: 1rem;
+  margin-bottom: 0.5rem;
   max-width: none;
 }
 
