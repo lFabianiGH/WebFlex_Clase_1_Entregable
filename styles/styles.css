@@ -10,9 +10,9 @@ Colores base:
 */
 
 * {
-  /* box-sizing: border-box; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -26,6 +26,10 @@ Colores base:
 
 /* Estilos de la sección Header */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta)); 
   color: var(--primary-color);
   padding: 1rem;
@@ -34,8 +38,14 @@ header {
   border-radius: 0.8rem;
 }
 
-/* Aplica  estilos al H1 específicamente ubicado en el Header */
-header > h1 {
+.identidad {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Aplica stilos al H1 ubicado en el Header independientemente del nivel de anidamiento*/
+header h1 {
   color: var(--secondary-color);
 }
 
@@ -90,7 +100,7 @@ nav {
   background-color: hsl(234, 100%, 95%, 0.6);
   padding: 2rem;
   border-radius: 0.5rem;
-  padding: 3px;
+  padding: 15px;
   border-radius: 0.5rem;
   border-style: solid none solid none;
   border-width: 3px;
@@ -100,10 +110,9 @@ nav {
 nav > ul {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin: 1rem;
   max-width: none;
 }
 
