@@ -1,116 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos base */
+        body { font-family: sans-serif; margin: 0; background: #f4f4f4; }
+        
+        /* TODO: Configura la Navbar */
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            background: #2c3e50;
+            padding: 1rem;
+            /* Centra verticalmente los elementos aquí */
+            flex: 0 0 auto;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 500px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            /* TODO: Haz que el menú ocupe el espacio sobrante con flex-grow */
+            flex-grow: 1;
+        }
+        
+        .nav-item {
+            /* TODO: Reparte el espacio equitativamente entre los items */
+            flex-grow: 1;
+            text-align: center;
+        }
 
-    <!--Conección con styles.css-->
+        /* TODO: Configura la sección de Cards */
+        .projects-container {
+            display: flex;
+            /* TODO: Permite el salto de línea y define un gap de 20px */
+            padding: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
 
-    <link rel="stylesheet" href="./styles/styles.css">
+        }
 
-    <!--Conexión con Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-        rel="stylesheet">
-
-    <title>Lucas' lair</title>
+        .card {
+            display: flex;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            /* TODO: Define un flex-basis de 300px y que puedan crecer */
+            flex-basis: 300px;
+            flex-grow: 1;
+            /* TODO: Centra el contenido (texto y botón) internamente */
+            align-items: center;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <div>
-            <img src="./assets/img/caverna.jpg" alt="">
-        </div>
 
-        <div>
-            <h1>Lucas' lair</h1>
-            <p class="texto-header">Código, tecnología y mates... MUCHOS MATES</p>
-        </div>
+    <nav class="navbar">
+        <div class="logo" style="color:white; margin-right:2rem;">LOGO</div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="#" style="color:white;">Servicios</a></li>
+            <li class="nav-item"><a href="#" style="color:white;">Portafolio</a></li>
+            <li class="nav-item"><a href="#" style="color:white;">Blog</a></li>
+        </ul>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/sobre-mi.html">Sobre mí</a></li>
-                <li><a href="./pages/proyectos.html">Proyectos</a></li>
-                <li><a href="./pages/servicios.html">Servicios</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main class="projects-container">
+        <!-- Implementa 3 cards aquí -->
+        <article class="card">
+            <h3>Mi Proyecto</h3>
+            <p>Descripción breve del trabajo realizado.</p>
+            <button>Ver Proyecto</button>
+        </article>
 
-    <main>
+        <article class="card">
+            <h3>Mis servicios</h3>
+            <p>Descripción breve del trabajo realizado.</p>
+            <button>Ver Proyecto</button>
+        </article>
 
-        <section>
-            <h2>Bienvenido</h2>
-            <figure>
-                <img src="./assets/img/lucas-fabiani.jpg" alt="Foto estilo Ghibli de Lucas Fabiani">
-                <figcaption>Este soy yo, Lucas</figcaption>
-            </figure>
-            <p>Hola, en este rincón compartiré ideas sobre programación,
-                tecnología y otros temas que me apasionan.</p>
-
-            <p>Me llamo Lucas Fabiani, soy Analista de Sistemas, trabajo en el área contable del municipio
-                en el cual vivo y me desempeño como docente de secundaria, y si... también soy adicto al mate amargo.
-            </p>
-
-        </section>
-
-        <section>
-            <h2>Proyectos</h2>
-            <p>
-                En esta sección encontrarás algunos de mis proyectos personales y colaborativos.
-                Desde aplicaciones web hasta scripts útiles, todo lo que he creado...
-            </p>
-
-            <article>
-                <h3>Ticketinhaber</h3>
-                <p>
-                    Plata forma para la gestión de ticket de soporte IT para dependencias de la
-                    administración pública municipal.
-                </p>
-            </article>
-
-            <article>
-                <h3>Voterix</h3>
-                <p>
-                    Aplicación de control de votación en tiempo real en la web.
-                </p>
-            </article>
-
-            <article>
-                <h3>Ideas en desarrollo</h3>
-                <p>
-                    Actualmente tengo proyectos en desarrollo algunos que pronto estaré compartiendo aquí.
-                </p>
-            </article>
-        </section>
-
-        <section>
-            <h2>Contacto</h2>
-            <p>
-                Si quieres ponerte en contacto conmigo, puedes enviarme un email
-                a <a href="mailto:lfabianis.lair+myweb@gmail.com">lfabianis.lair@gmail.com</a>
-            </p>
-        </section>
+        <article class="card">
+            <h3>Mi Bio</h3>
+            <p>Descripción breve del trabajo realizado.</p>
+            <button>Ver Proyecto</button>
+        </article>
     </main>
 
-    <footer>
-        <nav>
-            <p>Seguime en redes sociales:</p>
-            <ul>
-                <li><a href="https://www.facebook.com/lu.ma.fabiani" target="_blank">Facebook</a></li>
-                <li><a href="https://www.instagram.com/lu.ma.fabiani" target="_blank">Instagram</a></li>
-                <li><a href="https://github.com/lFabianiGH" target="_blank">Github</a></li>
-                <li><a href="https://www.linkedin.com/in/lmfabiani/" target="_blank">LinkedIn</a></li>
-                <li><a href="#"> Canal de Telegram</a> (en breve disponible)</li>
-            </ul>
-        </nav>
-        <p class="copyright">&copy; 2026 Lucas' lair. Todos los derechos reservados.</p>
-    </footer>
-
 </body>
-
 </html>
