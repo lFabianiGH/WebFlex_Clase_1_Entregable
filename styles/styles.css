@@ -80,9 +80,15 @@ article {
   background-color: hsl(234, 100%, 95%, 0.5);
   border-radius: 0.8rem;
   margin: 1rem;
-  padding: 1rem;
+  padding: 20px;
   border-style: none solid solid none;
   border-color: var(--primary-color);
+}
+
+/* Aplica estilos al contenedor de proyectos Flex*/
+.contenedor-proyectos {
+    display: flex;
+    gap: 20px;
 }
 
 /* Aplica estilos a las listas ordenadas <ol> */
