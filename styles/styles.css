@@ -15,14 +15,18 @@ Colores base:
   box-sizing: border-box;
 }
 
+
 :root {
-  --primary-color: #000e8a ;
+  --primary-color: #000e8a;
   --secondary-color: #e7e8feea;
   --accent-color: #0753c5;
-  --bg-light: hsla(234, 100%, 82%, 0.5);
+  --bg-light: #a3acff80;
   --color-gradiente-desde: #0753c5;
   --color-gradiente-hasta: #95b4e0;
+  /* --title-size: clamp(1.5rem, 5vw, 3rem); */
 }
+
+
 
 /* Estilos de la sección Header */
 header {
@@ -30,7 +34,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta)); 
+  background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta));
   color: var(--primary-color);
   padding: 1rem;
   margin: 1rem;
@@ -38,11 +42,6 @@ header {
   border-radius: 0.8rem;
 }
 
-.identidad {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
 
 /* Aplica stilos al H1 ubicado en el Header independientemente del nivel de anidamiento*/
 header h1 {
@@ -51,7 +50,7 @@ header h1 {
 
 /* Estilos al Body */
 body {
-  font-family:  "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: var(--bg-light)
 }
 
@@ -85,10 +84,116 @@ article {
   border-color: var(--primary-color);
 }
 
-/* Aplica estilos al contenedor de proyectos Flex*/
+/* 
+  Aplica estilos al contenedor de proyectos Anteriormente Flex
+  Reconvertido a Grid para responsividad Mobile First
+*/
 .contenedor-proyectos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* 
+  Aplica estilos al contenedor de proyectos Anteriormente Flex
+  Reconvertido a Grid para responsividad Mobile First
+  en el logo de empresa
+  */
+  .contenedor-identidad {
+    display: grid;
+    grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "logo"
+    "texto-logo";
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Aplica estilos al <ul> dentro del <nav> específicamente*/
+nav>ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem;
+  max-width: none;
+}
+
+/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
+nav>ul>li {
+  display: block;
+  list-style: none;
+  border-radius: 0.2rem;
+}
+
+
+.contenedor-header{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 1rem
+}
+
+@media (min-width: 768px) {
+  .contenedor-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contenedor-identidad {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "logo texto-logo";
+    gap: 1rem;
+  }
+  p.texto-header {
+    background-color: hsl(234, 100%, 80%, 0.6);
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    max-width: none;
+    padding: 9px;
+    border-radius: 0.5rem;
+    border-style: solid none solid none;
+    border-width: 3px;
+  }
+
+  nav>ul {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0.5rem;
+    max-width: none;
+  }
+
+  nav>ul>li {
+    display: block;
+    list-style: none;
+    border-radius: 0.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-proyectos {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .contenedor-identidad {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "logo texto-logo";
+    gap: 1rem;
+  }
+  .contenedor-header{
+    grid-template-columns: 3fr minmax(345, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+      "contenedor-identidad nav";
+    align-items: center;
+    gap: 1rem
+  }
 }
 
 /* Aplica estilos a las listas ordenadas <ol> */
@@ -112,31 +217,16 @@ nav {
   border-width: 3px;
 }
 
-/* Aplica estilos al <ul> dentro del <nav> específicamente*/
-nav > ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 2rem;
-  margin: 1rem;
-  max-width: none;
-}
-
-/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
-nav > ul > li {
-  list-style: none;
-  border-radius: 0.2rem;
-}
 
 /* Aplica estilos al H1 en general */
 h1 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 /* Aplica estilos al <p> en general */
 p {
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: normal;
   max-width: 90ch;
@@ -154,24 +244,17 @@ footer p {
 Aplica estilos al <p> que sean hijos directos del <footer> y
 no  anidado dentro de otra etiqueta contenedora.
 */
-footer > p {
-  margin:  15px 0;
+footer>p {
+  margin: 15px 0;
   text-align: right;
 }
 
 /* Aplica estilos específicos para el texto del <header>*/
 p.texto-header {
-  background-color: hsl(234, 100%, 80%, 0.6);
-  font-size: 1.2rem;
-  font-style: italic;
-  font-weight: 600;
-  line-height: normal;
-  max-width: none;
-  padding: 9px;
-  border-radius: 0.5rem;
-  border-style: solid none solid none;
-  border-width: 3px;
+  font-size: 0.8rem;
+
 }
+
 /*
 .bullet y .bullet::before
 
@@ -183,18 +266,18 @@ cuando no se trate de listas de elementos atómicos con textos muy cortos.
 Pensado para aplicar viñetas a párrafos sobre etiquetas <p> a las que se les asigne la
 clase "bullet
 */
-.bullet{
-    position: relative;
-    padding-left: 25px;
+.bullet {
+  position: relative;
+  padding-left: 25px;
 }
 
-.bullet::before{
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #000000;
-    font-size: 1.2rem;
-    font-weight: bold;
+.bullet::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 /*
@@ -210,32 +293,32 @@ Aplicable a listas "paso a paso"
 Pensado para aplicar numeración  a párrafos sobre etiquetas <p> a las que se les asigne la
 clase "lista-ordenada¨
 */
-.lista-ordenada{
-    counter-reset: item;
+.lista-ordenada {
+  counter-reset: item;
 }
 
-.lista-ordenada p{
-    counter-increment: item;
-    position: relative;
-    padding-left: 45px;
-    margin-bottom: 15px;
+.lista-ordenada p {
+  counter-increment: item;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 15px;
 }
 
-.lista-ordenada p::before{
-    content: counter(item) ".";
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-    color: #000000;
-    width: 30px;
-    text-align: right;
+.lista-ordenada p::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: #000000;
+  width: 30px;
+  text-align: right;
 }
 
 
 /* aplica estilos a las etiquetas <a>*/
 a {
-  color:var(--primary-color);
+  color: var(--primary-color);
   font-weight: 500;
   text-decoration: underline dotted;
 }
