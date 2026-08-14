@@ -267,20 +267,20 @@ Aplica estilos al contenedor de proyectos Anteriormente Flex
 Reconvertido a Grid para responsividad Mobile First
 */
 .logo {
-  grid-area: "logo";
+  grid-area: logo;
 }
 
 .texto-logo {
-  grid-area: "texto-logo";
+  grid-area: texto-logo;
 }
 
 .contenedor-nav {
-  grid-area: "contenedor-nav";
+  grid-area: contenedor-nav;
 }
 
 .contenedor-header {
   display: grid;
-  grid-area: "contenedor-header";
+  grid-area: contenedor-header;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
@@ -304,7 +304,7 @@ Reconvertido a Grid para responsividad Mobile First
 
 .contenedor-proyectos {
   display: grid;
-  grid-area: "contenedor-proyectos";
+  grid-area: contenedor-proyectos;
   grid-template-columns: 1fr;
   gap: 20px;
 }
@@ -320,7 +320,7 @@ Reconvertido a Grid para responsividad Mobile First
 @media (min-width: 768px) {
   .contenedor-header {
     display: grid;
-    grid-area: "contenedor-header";
+    grid-area: contenedor-header;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
@@ -347,7 +347,7 @@ Reconvertido a Grid para responsividad Mobile First
 
   .contenedor-identidad {
     display: grid;
-    grid-area: "contenedor-identidad";
+    grid-area: contenedor-identidad;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -380,9 +380,9 @@ Reconvertido a Grid para responsividad Mobile First
 @media (min-width: 1024px) {
   .contenedor-header {
     display: grid;
-    grid-area: "contenedor-header";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+    grid-area: contenedor-header;
+    grid-template-columns: 3fr minmax(550px, 1fr);
+    grid-template-rows: 1fr;
     grid-template-areas:
       "contenedor-identidad contenedor-nav";
     align-items: center;
@@ -406,7 +406,7 @@ Reconvertido a Grid para responsividad Mobile First
 
   .contenedor-identidad {
     display: grid;
-    grid-area: "contenedor-identidad";
+    grid-area: contenedor-identidad;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
