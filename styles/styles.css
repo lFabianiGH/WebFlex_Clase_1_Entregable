@@ -27,7 +27,6 @@ Colores base:
 }
 
 
-
 /* Estilos de la sección Header */
 header {
   display: flex;
@@ -84,126 +83,14 @@ article {
   border-color: var(--primary-color);
 }
 
-/* 
-  Aplica estilos al contenedor de proyectos Anteriormente Flex
-  Reconvertido a Grid para responsividad Mobile First
-*/
-.contenedor-proyectos {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-
-/* 
-  Aplica estilos al contenedor de proyectos Anteriormente Flex
-  Reconvertido a Grid para responsividad Mobile First
-  en el logo de empresa
-  */
-  .contenedor-identidad {
-    display: grid;
-    grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: 
-    "logo"
-    "texto-logo";
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Aplica estilos al <ul> dentro del <nav> específicamente*/
-nav>ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 1rem;
-  max-width: none;
-}
-
-/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
-nav>ul>li {
-  display: block;
-  list-style: none;
-  border-radius: 0.2rem;
-}
-
-
-.contenedor-header{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  align-items: center;
-  gap: 1rem
-}
-
-@media (min-width: 768px) {
-  .contenedor-proyectos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .contenedor-identidad {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-      "logo texto-logo";
-    gap: 1rem;
-  }
-  p.texto-header {
-    background-color: hsl(234, 100%, 80%, 0.6);
-    font-style: italic;
-    font-weight: 600;
-    line-height: normal;
-    max-width: none;
-    padding: 9px;
-    border-radius: 0.5rem;
-    border-style: solid none solid none;
-    border-width: 3px;
-  }
-
-  nav>ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    margin: 0.5rem;
-    max-width: none;
-  }
-
-  nav>ul>li {
-    display: block;
-    list-style: none;
-    border-radius: 0.2rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .contenedor-proyectos {
-    grid-template-columns: repeat(3, auto);
-  }
-
-  .contenedor-identidad {
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-      "logo texto-logo";
-    gap: 1rem;
-  }
-  .contenedor-header{
-    grid-template-columns: 3fr minmax(345, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-      "contenedor-identidad nav";
-    align-items: center;
-    gap: 1rem
-  }
-}
-
 /* Aplica estilos a las listas ordenadas <ol> */
 ol {
-  max-width: 90ch;
+  /* max-width: 90ch; */
 }
 
 /* Aplica estilos a las listas desordenadas <ul> */
 ul {
-  max-width: 90ch;
+  /* max-width: 90ch; */
 }
 
 /* Aplica estilos al <Nav> */
@@ -229,7 +116,7 @@ p {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: normal;
-  max-width: 90ch;
+  /* max-width: 90ch; */
 }
 
 /*
@@ -237,7 +124,7 @@ Aplica estilos al <p> dentro del <footer> aunque el <p> independientemente que s
 hijo, nieto, etc. del <footer>, es sufiente que esté dentro de esa etiqueta.
 */
 footer p {
-  max-width: none;
+  /* max-width: none; */
 }
 
 /*
@@ -252,7 +139,15 @@ footer>p {
 /* Aplica estilos específicos para el texto del <header>*/
 p.texto-header {
   font-size: 0.8rem;
-
+  background-color: hsl(234, 100%, 80%, 0.6);
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  /* max-width: none; */
+  padding: 9px;
+  border-radius: 0.5rem;
+  border-style: solid none solid none;
+  border-width: 3px;
 }
 
 /*
@@ -315,7 +210,6 @@ clase "lista-ordenada¨
   text-align: right;
 }
 
-
 /* aplica estilos a las etiquetas <a>*/
 a {
   color: var(--primary-color);
@@ -350,4 +244,194 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
+}
+
+/* Aplica estilos al <ul> dentro del <nav> específicamente*/
+nav>ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem;
+  /* max-width: none; */
+}
+
+/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
+nav>ul>li {
+  display: block;
+  list-style: none;
+  border-radius: 0.2rem;
+}
+
+/* 
+Aplica estilos al contenedor de proyectos Anteriormente Flex
+Reconvertido a Grid para responsividad Mobile First
+*/
+.logo {
+  grid-area: "logo";
+}
+
+.texto-logo {
+  grid-area: "texto-logo";
+}
+
+.contenedor-nav {
+  grid-area: "contenedor-nav";
+}
+
+.contenedor-header {
+  display: grid;
+  grid-area: "contenedor-header";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "contenedor-identidad"
+    "contenedor-nav";
+  align-items: center;
+  gap: 1rem
+}
+
+.contenedor-identidad {
+  display: grid;
+  grid-area: contenedor-identidad;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "logo"
+    "texto-logo";
+  align-items: center;
+  gap: 1rem;
+}
+
+.contenedor-proyectos {
+  display: grid;
+  grid-area: "contenedor-proyectos";
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.texto-plano {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: normal;
+  /* max-width: 90ch; */
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-header {
+    display: grid;
+    grid-area: "contenedor-header";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "contenedor-identidad"
+      "contenedor-nav";
+    align-items: center;
+    gap: 1rem
+  }
+
+  nav>ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  nav>ul>li {
+    text-align: center;
+  }
+
+  .contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contenedor-identidad {
+    display: grid;
+    grid-area: "contenedor-identidad";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "logo texto-logo";
+    gap: 1rem;
+  }
+
+  p.texto-header {
+    font-size: 1rem;
+    background-color: hsl(234, 100%, 80%, 0.6);
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    /* max-width: none; */
+    padding: 9px;
+    border-radius: 0.5rem;
+    border-style: solid none solid none;
+    border-width: 3px;
+  }
+
+  .texto-plano {
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: normal;
+    /* max-width: 90ch; */
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contenedor-header {
+    display: grid;
+    grid-area: "contenedor-header";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "contenedor-identidad contenedor-nav";
+    align-items: center;
+    gap: 1rem
+  }
+
+  nav>ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+
+  nav>ul>li {
+    text-align: center;
+  }
+
+  .contenedor-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .contenedor-identidad {
+    display: grid;
+    grid-area: "contenedor-identidad";
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "logo texto-logo";
+    gap: 1rem;
+  }
+
+  p.texto-header {
+    font-size: 1.2rem;
+    background-color: hsl(234, 100%, 80%, 0.6);
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    /* max-width: none; */
+    padding: 9px;
+    border-radius: 0.5rem;
+    border-style: solid none solid none;
+    border-width: 3px;
+  }
+
+  .texto-plano {
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: normal;
+    /* max-width: 90ch; */
+    margin-bottom: 1rem;
+  }
 }
