@@ -29,9 +29,9 @@ Colores base:
 
 /* Estilos de la sección Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
 
   background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta));
   color: var(--primary-color);
@@ -285,7 +285,7 @@ Reconvertido a Grid para responsividad Mobile First
   grid-template-areas:
     "contenedor-identidad"
     "contenedor-nav";
-  align-items: center;
+  align-items: grid-end;
   gap: 1rem
 }
 
@@ -297,7 +297,7 @@ Reconvertido a Grid para responsividad Mobile First
   grid-template-areas:
     "logo"
     "texto-logo";
-  align-items: center;
+  align-items: grid-end;
   gap: 1rem;
 }
 
@@ -325,7 +325,7 @@ Reconvertido a Grid para responsividad Mobile First
     grid-template-areas:
       "contenedor-identidad"
       "contenedor-nav";
-    align-items: center;
+    align-items: grid-end;
     gap: 1rem
   }
 
@@ -384,7 +384,7 @@ Reconvertido a Grid para responsividad Mobile First
     grid-template-rows: 1fr;
     grid-template-areas:
       "contenedor-identidad contenedor-nav";
-    align-items: center;
+    align-items: grid-end;
     gap: 1rem
   }
 
@@ -433,4 +433,48 @@ Reconvertido a Grid para responsividad Mobile First
     /* max-width: 90ch; */
     margin-bottom: 1rem;
   }
+
+  .navbar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
+
+/* ==========================================================
+   Integración de Bootstrap - Navbar
+   ========================================================== */
+
+.contenedor-header {
+  display: block;
+}
+
+.navbar {
+  padding: 0.5rem 0;
+}
+
+.navbar .nav-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .navbar-toggler {
+  border-color: var(--primary-color);
+  /* margin-left: auto; */
+}
+
+.navbar .navbar-toggler-icon {
+  filter: brightness(0) invert(0);
+}
+
+.navbar-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
 }
