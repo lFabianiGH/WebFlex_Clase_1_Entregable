@@ -23,16 +23,11 @@ Colores base:
   --bg-light: #a3acff80;
   --color-gradiente-desde: #0753c5;
   --color-gradiente-hasta: #95b4e0;
-  /* --title-size: clamp(1.5rem, 5vw, 3rem); */
 }
 
 
 /* Estilos de la sección Header */
 header {
-  /* display: flex; */
-  /* justify-content: space-between;
-  align-items: center; */
-
   background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta));
   color: var(--primary-color);
   padding: 1rem;
@@ -75,23 +70,18 @@ section {
 
 /* Aplica estilos a las <article> */
 article {
+  display: flex;
+  flex-direction: column;
   background-color: hsl(234, 100%, 95%, 0.5);
   border-radius: 0.8rem;
   margin: 1rem;
   padding: 20px;
   border-style: none solid solid none;
   border-color: var(--primary-color);
+  align-items: center;
 }
 
-/* Aplica estilos a las listas ordenadas <ol> */
-ol {
-  /* max-width: 90ch; */
-}
 
-/* Aplica estilos a las listas desordenadas <ul> */
-ul {
-  /* max-width: 90ch; */
-}
 
 /* Aplica estilos al <Nav> */
 nav {
@@ -118,13 +108,6 @@ p {
   /* max-width: 90ch; */
 }
 
-/*
-Aplica estilos al <p> dentro del <footer> aunque el <p> independientemente que sea
-hijo, nieto, etc. del <footer>, es sufiente que esté dentro de esa etiqueta.
-*/
-footer p {
-  /* max-width: none; */
-}
 
 /*
 Aplica estilos al <p> que sean hijos directos del <footer> y
@@ -223,6 +206,21 @@ a:hover {
   text-decoration: underline solid;
 }
 
+article>a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+article p {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
 /* Aplica estilos a las etiquetas <figure> */
 figure {
   display: flex;
@@ -301,9 +299,9 @@ Reconvertido a Grid para responsividad Mobile First
   gap: 1rem;
 }
 
-.contenedor-proyectos {
+.contenedor-seccion {
   display: grid;
-  grid-area: contenedor-proyectos;
+  grid-area: contenedor-seccion;
   grid-template-columns: 1fr;
   gap: 20px;
 }
@@ -312,7 +310,22 @@ Reconvertido a Grid para responsividad Mobile First
   font-size: 0.8rem;
   font-weight: 400;
   line-height: normal;
-  /* max-width: 90ch; */
+  margin-bottom: 1rem;
+}
+
+.texto-plano-centrado {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+
+.texto-plano-justificado {
+  text-align: justify;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: normal;
   margin-bottom: 1rem;
 }
 
@@ -338,7 +351,7 @@ Reconvertido a Grid para responsividad Mobile First
     text-align: center;
   }
 
-  .contenedor-proyectos {
+  .contenedor-seccion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -371,7 +384,22 @@ Reconvertido a Grid para responsividad Mobile First
     font-size: 1rem;
     font-weight: 450;
     line-height: normal;
-    /* max-width: 90ch; */
+    margin-bottom: 1rem;
+  }
+
+  .texto-plano-centrado {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  .texto-plano-justificado {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 450;
+    line-height: normal;
     margin-bottom: 1rem;
   }
 }
@@ -397,7 +425,7 @@ Reconvertido a Grid para responsividad Mobile First
     text-align: center;
   }
 
-  .contenedor-proyectos {
+  .contenedor-seccion {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -430,10 +458,24 @@ Reconvertido a Grid para responsividad Mobile First
     font-size: 1rem;
     font-weight: 550;
     line-height: normal;
-    /* max-width: 90ch; */
     margin-bottom: 1rem;
   }
 
+    .texto-plano-centrado {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  .texto-plano-justificado {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 550;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
   .navbar .navbar-collapse {
     justify-content: flex-end;
   }

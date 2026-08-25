@@ -23,18 +23,18 @@
 </head>
 
 <body>
-   <header>
+    <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <div class="contenedor-identidad">
                     <img class="logo" src="../assets/img/caverna.jpg" alt="Logo de Lucas' lair">
-    
+
                     <div class="texto-logo">
                         <h1>Lucas' lair</h1>
                         <p class="texto-header">Código, tecnología y mates... MUCHOS MATES</p>
                     </div>
                 </div>
-                
+
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
                     aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -76,21 +76,121 @@
                     <img src="../assets/img/contacto.jpg" alt="imagen sugerente de la accion de ponerse en contacto">
                     <figcaption></figcaption>
                 </figure>
-                <p class="texto-plano">
+                <p class="texto-plano-justificado">
                     Escríbeme para hablar sobre alguno de mis proyecto, alguno de los tuyo, o tan solo
                     para hablar de tecnología y mate.
                 </p>
-                <p class="texto-plano">
-                    Para ello puedes completar el formulario a continuación:
-                </p>
-                <!--
-                
-                En este espacio deberá implementarse un formulario para recopilar datos de contacto
-
-                -->
-
 
             </article>
+            <section>
+                <h2>¿Cómo puedes contactarte conmigo?</h2>
+
+                <div class="accordion" id="accordionContacto">
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#contactoEmail" aria-expanded="true" aria-controls="contactoEmail">
+                                A través de email
+                            </button>
+                        </h3>
+
+                        <div id="contactoEmail" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionContacto">
+
+                            <div class="accordion-body">
+
+                                <p class="texto-plano">
+                                    Si quieres ponerte en contacto conmigo, puedes
+                                    enviarme un email a:
+                                </p>
+                                <p class="texto-plano">
+                                    <a href="mailto:lfabianis.lair+myweb@gmail.com">
+                                        lfabianis.lair@gmail.com
+                                    </a>
+                                </p>
+                                <p class="texto-plano">
+                                    (responderé dentro de las 24 a 48 horas hábiles)
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#contactoTelefono" aria-expanded="false"
+                                aria-controls="contactoTelefono">
+                                A través de teléfono
+                            </button>
+                        </h3>
+
+                        <div id="contactoTelefono" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionContacto">
+
+                            <div class="accordion-body">
+
+                                <p class="texto-plano">
+                                    Contactame a través de nuestros teléfonos de contacto, que son los
+                                    siguientes:
+                                </p>
+                                <p class="texto-plano">
+                                    Soporte: +54 9 999 123-4567
+                                </p>
+                                <p class="texto-plano">
+                                    Ventas: +54 9 999 876-5432
+                                </p>
+                                <p class="texto-plano">
+                                    Información: +54 9 999 555-5555
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#contactoTextos" aria-expanded="false" aria-controls="contactoTextos">
+                                A través de Whatsapp y Telegram
+                            </button>
+                        </h3>
+
+                        <div id="contactoTextos" class="accordion-collapse collapse"
+                            data-bs-parent="#accordionContacto">
+
+                            <div class="accordion-body">
+
+                                <p class="texto-plano">
+                                    También puedes contactarme a través de nuestra línea de WhatsApp y Telegram, que son
+                                    las
+                                    siguientes:
+                                </p>
+                                <p class="texto-plano">
+                                    WhatsApp: +54 9 999 999-4567
+                                </p>
+                                <p class="texto-plano">
+                                    Telegram: +54 9 999 999-5432
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
