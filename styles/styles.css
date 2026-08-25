@@ -78,7 +78,7 @@ article {
   padding: 20px;
   border-style: none solid solid none;
   border-color: var(--primary-color);
-  align-items: center;
+  /* align-items: center; */
 }
 
 
@@ -461,7 +461,8 @@ Reconvertido a Grid para responsividad Mobile First
     margin-bottom: 1rem;
   }
 
-    .texto-plano-centrado {
+  .texto-plano-centrado {
+    display: block;
     text-align: center;
     font-size: 1rem;
     font-weight: 550;
@@ -470,12 +471,14 @@ Reconvertido a Grid para responsividad Mobile First
   }
 
   .texto-plano-justificado {
+    display: block;
     text-align: justify;
     font-size: 1rem;
     font-weight: 550;
     line-height: normal;
     margin-bottom: 1rem;
   }
+
   .navbar .navbar-collapse {
     justify-content: flex-end;
   }
@@ -486,6 +489,14 @@ Reconvertido a Grid para responsividad Mobile First
    Integración de Bootstrap - Navbar
    ========================================================== */
 
+article.card {
+  background-color: hsl(234, 100%, 95%, 0.5);
+  border-radius: 0.8rem;
+  border-width: 0 3px 3px 0;
+  border-style: none solid solid none;
+  border-color: var(--primary-color);
+}
+
 .contenedor-header {
   display: block;
 }
@@ -494,20 +505,27 @@ Reconvertido a Grid para responsividad Mobile First
   padding: 0.5rem 0;
 }
 
+
 .navbar .nav-link {
   color: var(--primary-color);
   font-weight: 500;
-  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .navbar .nav-link:hover {
-  color: white;
-  text-decoration: none;
+  color: var(--primary-color);
+  background-color: #d617171a;
+}
+
+.navbar .nav-link:active {
+  color: var(--secondary-color);
+  background-color: #846dec1a;
 }
 
 .navbar .navbar-toggler {
   border-color: var(--primary-color);
-  /* margin-left: auto; */
 }
 
 .navbar .navbar-toggler-icon {
