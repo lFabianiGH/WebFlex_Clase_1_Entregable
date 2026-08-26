@@ -3,7 +3,7 @@
 ## Entregable: Sitio Web Desplegado en Github Pages
 
 ### URL:
-https://lfabianigh.github.io/WebFlex_Clase_1_Entregable/pages/servicios.html
+https://lfabianigh.github.io/WebFlex_Clase_1_Entregable/
 
 **Objetivo Crear el esqueleto semántico de la página de inicio de tu sitio web personal, sin estilos visuales (eso va en el próximo módulo).**
 
