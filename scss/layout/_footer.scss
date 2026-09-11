@@ -1,0 +1,17 @@
+@use "../utilities/variables" as *;
+
+// Footer
+
+footer {
+    background-color: $color-primario;
+    color: $color-secundario;
+    padding: 1rem;
+    margin: 0rem 1rem 1rem 1rem;
+    text-align: center;
+    border-radius: 0.8rem;
+}
+
+footer > p {
+    margin: 15px 0;
+    text-align: right;
+}

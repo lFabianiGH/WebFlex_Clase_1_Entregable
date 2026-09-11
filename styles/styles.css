@@ -1,309 +1,27 @@
-/* 
-  stylesheet: styles.css
-*/
-
-
-/*
-Colores base: 
-  - Incluye color primario, secundario y de acento según lo solicitado (uso de :root sugerido por Ticher)
-  - Incluí por decisión propia par homogeneizar el color de fondo por defecto
-*/
-
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-:root {
-  --primary-color: #000e8a;
-  --secondary-color: #e7e8feea;
-  --accent-color: #0753c5;
-  --bg-light: #a3acff80;
-  --color-gradiente-desde: #0753c5;
-  --color-gradiente-hasta: #95b4e0;
+body {
+  background-color: rgba(163, 172, 255, 0.5019607843);
 }
 
-
-/* Estilos de la sección Header */
-header {
-  background: linear-gradient(var(--color-gradiente-desde), var(--color-gradiente-hasta));
-  color: var(--primary-color);
-  padding: 1rem;
-  margin: 1rem;
-  border-bottom: 5px;
-  border-radius: 0.8rem;
-}
-
-
-/* Aplica stilos al H1 ubicado en el Header independientemente del nivel de anidamiento*/
-header h1 {
-  color: var(--secondary-color);
-}
-
-/* Estilos al Body */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--bg-light)
 }
 
-/* Estilos al Footer */
-footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  padding: 1rem;
-  margin: 0rem 1rem 1rem 1rem;
-  text-align: center;
-  border-radius: 0.8rem;
-}
-
-/* Aplica estilos a las <section> */
-section {
-  background-color: hsl(234, 100%, 75%, 0.5);
-  margin: 1rem 1rem 2.5rem 1rem;
-  padding: 1rem;
-  border-radius: 0.8rem;
-  border-style: solid none none solid;
-  border-color: var(--primary-color);
-}
-
-/* Aplica estilos a las <article> */
-article {
-  display: flex;
-  flex-direction: column;
-  background-color: hsl(234, 100%, 95%, 0.5);
-  border-radius: 0.8rem;
-  margin: 1rem;
-  padding: 20px;
-  border-style: none solid solid none;
-  border-color: var(--primary-color);
-  /* align-items: center; */
-}
-
-
-
-/* Aplica estilos al <Nav> */
-nav {
-  background-color: hsl(234, 100%, 95%, 0.6);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  padding: 15px;
-  border-style: solid none solid none;
-  border-width: 3px;
-}
-
-
-/* Aplica estilos al H1 en general */
 h1 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-/* Aplica estilos al <p> en general */
 p {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: normal;
-  /* max-width: 90ch; */
-}
-
-
-/*
-Aplica estilos al <p> que sean hijos directos del <footer> y
-no  anidado dentro de otra etiqueta contenedora.
-*/
-footer>p {
-  margin: 15px 0;
-  text-align: right;
-}
-
-/* Aplica estilos específicos para el texto del <header>*/
-p.texto-header {
-  font-size: 0.8rem;
-  background-color: hsl(234, 100%, 80%, 0.6);
-  font-style: italic;
-  font-weight: 600;
-  line-height: normal;
-  /* max-width: none; */
-  padding: 9px;
-  border-radius: 0.5rem;
-  border-style: solid none solid none;
-  border-width: 3px;
-}
-
-/*
-.bullet y .bullet::before
-
-Aplican estilos a los elementos con la clase "bullet"
-
-lo utilizo para simular los efecto de <ul> sin generar la sobrecarga de esta etiqueta 
-cuando no se trate de listas de elementos atómicos con textos muy cortos.
-
-Pensado para aplicar viñetas a párrafos sobre etiquetas <p> a las que se les asigne la
-clase "bullet
-*/
-.bullet {
-  position: relative;
-  padding-left: 25px;
-}
-
-.bullet::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #000000;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/*
-.lista-ordenada {...} .lista-ordenada p{...} y .lista-ordenada::before {...}
-
-Aplican estilos a los elementos con la clase "lista-ordenada"
-
-lo utilizo para simular los efecto de <ol> sin generar la sobrecarga de esta etiqueta 
-cuando no se trate de listas de elementos que requiera orden y sean  atómicos con textos muy cortos.
-
-Aplicable a listas "paso a paso"
-
-Pensado para aplicar numeración  a párrafos sobre etiquetas <p> a las que se les asigne la
-clase "lista-ordenada¨
-*/
-.lista-ordenada {
-  counter-reset: item;
-}
-
-.lista-ordenada p {
-  counter-increment: item;
-  position: relative;
-  padding-left: 45px;
-  margin-bottom: 15px;
-}
-
-.lista-ordenada p::before {
-  content: counter(item) ".";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-weight: bold;
-  color: #000000;
-  width: 30px;
-  text-align: right;
-}
-
-/* aplica estilos a las etiquetas <a>*/
-a {
-  color: var(--primary-color);
-  font-weight: 500;
-  text-decoration: underline dotted;
-}
-
-/* aplica estilos a las etiquetas <a> cuando el mouse las sobrevuela*/
-a:hover {
-  /* Color más oscuro al pasar el mouse */
-  color: var(--accent-color);
-  text-decoration: underline solid;
-}
-
-article>a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-article p {
-  text-align: justify;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: var(--primary-color);
-}
-
-/* Aplica estilos a las etiquetas <figure> */
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-}
-
-/* Aplica estilos a las etiquetas <figcaption> */
-figcaption {
-  font-size: 0.8rem;
-  color: var(--primary-color);
-  margin-top: 0.5rem;
-}
-
-/* Aplica estilos a las etiquetas <img> */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-/* Aplica estilos al <ul> dentro del <nav> específicamente*/
-nav>ul {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin: 1rem;
-  /* max-width: none; */
-}
-
-/* Aplica estilos a los <li> dentro del <ul> dentro del <nav> específicamente*/
-nav>ul>li {
-  display: block;
-  list-style: none;
-  border-radius: 0.2rem;
-}
-
-/* 
-Aplica estilos al contenedor de proyectos Anteriormente Flex
-Reconvertido a Grid para responsividad Mobile First
-*/
-.logo {
-  grid-area: logo;
-}
-
-.texto-logo {
-  grid-area: texto-logo;
-}
-
-.contenedor-nav {
-  grid-area: contenedor-nav;
-}
-
-.contenedor-header {
-  display: grid;
-  grid-area: contenedor-header;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "contenedor-identidad"
-    "contenedor-nav";
-  align-items: grid-end;
-  gap: 1rem
-}
-
-.contenedor-identidad {
-  display: grid;
-  grid-area: contenedor-identidad;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    "logo"
-    "texto-logo";
-  align-items: grid-end;
-  gap: 1rem;
-}
-
-.contenedor-seccion {
-  display: grid;
-  grid-area: contenedor-seccion;
-  grid-template-columns: 1fr;
-  gap: 20px;
 }
 
 .texto-plano {
@@ -330,204 +48,189 @@ Reconvertido a Grid para responsividad Mobile First
 }
 
 @media (min-width: 768px) {
+  .texto-plano {
+    font-size: 1rem;
+    font-weight: 450;
+  }
+  .texto-plano-centrado {
+    font-size: 1rem;
+    font-weight: 450;
+  }
+  .texto-plano-justificado {
+    font-size: 1rem;
+    font-weight: 450;
+  }
+}
+@media (min-width: 1024px) {
+  .texto-plano {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  .texto-plano-centrado {
+    display: block;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+  .texto-plano-justificado {
+    display: block;
+    font-size: 1rem;
+    font-weight: 550;
+  }
+}
+header {
+  background: linear-gradient(#0753c5, #95b4e0);
+  color: #000e8a;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 5px;
+  border-radius: 0.8rem;
+}
+header h1 {
+  color: rgba(231, 232, 254, 0.9176470588);
+}
+
+.contenedor-identidad {
+  display: grid;
+  grid-area: contenedor-identidad;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "logo" "texto-logo";
+  align-items: grid-end;
+  gap: 1rem;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.texto-logo {
+  grid-area: texto-logo;
+}
+
+.contenedor-header {
+  display: grid;
+  grid-area: contenedor-header;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "contenedor-identidad" "contenedor-nav";
+  align-items: grid-end;
+  gap: 1rem;
+}
+
+.contenedor-nav {
+  grid-area: contenedor-nav;
+}
+
+p.texto-header {
+  font-size: 0.8rem;
+  background-color: rgba(153, 163, 255, 0.6);
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+  padding: 9px;
+  border-radius: 0.5rem;
+  border-style: solid none solid none;
+  border-width: 3px;
+}
+
+@media (min-width: 768px) {
   .contenedor-header {
-    display: grid;
-    grid-area: contenedor-header;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "contenedor-identidad"
-      "contenedor-nav";
-    align-items: grid-end;
-    gap: 1rem
+    grid-template-areas: "contenedor-identidad" "contenedor-nav";
   }
-
-  nav>ul {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-  }
-
-  nav>ul>li {
-    text-align: center;
-  }
-
-  .contenedor-seccion {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
   .contenedor-identidad {
-    display: grid;
-    grid-area: contenedor-identidad;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-      "logo texto-logo";
-    gap: 1rem;
+    grid-template-areas: "logo texto-logo";
   }
-
   p.texto-header {
     font-size: 1rem;
-    background-color: hsl(234, 100%, 80%, 0.6);
-    font-style: italic;
-    font-weight: 600;
-    line-height: normal;
-    /* max-width: none; */
-    padding: 9px;
-    border-radius: 0.5rem;
-    border-style: solid none solid none;
-    border-width: 3px;
-  }
-
-  .texto-plano {
-    font-size: 1rem;
-    font-weight: 450;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
-
-  .texto-plano-centrado {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 450;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
-
-  .texto-plano-justificado {
-    text-align: justify;
-    font-size: 1rem;
-    font-weight: 450;
-    line-height: normal;
-    margin-bottom: 1rem;
   }
 }
-
 @media (min-width: 1024px) {
   .contenedor-header {
-    display: grid;
-    grid-area: contenedor-header;
     grid-template-columns: 3fr minmax(550px, 1fr);
     grid-template-rows: 1fr;
-    grid-template-areas:
-      "contenedor-identidad contenedor-nav";
-    align-items: grid-end;
-    gap: 1rem
+    grid-template-areas: "contenedor-identidad contenedor-nav";
   }
-
-  nav>ul {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.5rem;
-  }
-
-  nav>ul>li {
-    text-align: center;
-  }
-
-  .contenedor-seccion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
   .contenedor-identidad {
-    display: grid;
-    grid-area: contenedor-identidad;
     grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas:
-      "logo texto-logo";
-    gap: 1rem;
+    grid-template-areas: "logo texto-logo";
   }
-
   p.texto-header {
     font-size: 1.2rem;
-    background-color: hsl(234, 100%, 80%, 0.6);
-    font-style: italic;
-    font-weight: 600;
-    line-height: normal;
-    /* max-width: none; */
-    padding: 9px;
-    border-radius: 0.5rem;
-    border-style: solid none solid none;
-    border-width: 3px;
-  }
-
-  .texto-plano {
-    font-size: 1rem;
-    font-weight: 550;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
-
-  .texto-plano-centrado {
-    display: block;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 550;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
-
-  .texto-plano-justificado {
-    display: block;
-    text-align: justify;
-    font-size: 1rem;
-    font-weight: 550;
-    line-height: normal;
-    margin-bottom: 1rem;
-  }
-
-  .navbar .navbar-collapse {
-    justify-content: flex-end;
   }
 }
-
-
-/* ==========================================================
-   Integración de Bootstrap - Navbar
-   ========================================================== */
-
-article.card {
-  background-color: hsl(234, 100%, 95%, 0.5);
-  border-radius: 0.8rem;
-  border-width: 0 3px 3px 0;
-  border-style: none solid solid none;
-  border-color: var(--primary-color);
-}
-
 .contenedor-header {
   display: block;
 }
 
+nav {
+  background-color: rgba(229, 232, 255, 0.6);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  padding: 15px;
+  border-style: solid none solid none;
+  border-width: 3px;
+}
+
+nav > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+nav > ul > li {
+  display: block;
+  list-style: none;
+  border-radius: 0.2rem;
+}
+
+@media (min-width: 768px) {
+  nav > ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  nav > ul > li {
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  nav > ul {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+  }
+  nav > ul > li {
+    text-align: center;
+  }
+  .navbar .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
 .navbar {
   padding: 0.5rem 0;
 }
-
-
 .navbar .nav-link {
-  color: var(--primary-color);
+  color: #000e8a;
   font-weight: 500;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-
 .navbar .nav-link:hover {
-  color: var(--primary-color);
-  background-color: #d617171a;
+  color: #000e8a;
+  background-color: rgba(214, 23, 23, 0.1019607843);
 }
-
 .navbar .nav-link:active {
-  color: var(--secondary-color);
-  background-color: #846dec1a;
+  color: rgba(231, 232, 254, 0.9176470588);
+  background-color: rgba(132, 109, 236, 0.1019607843);
 }
-
 .navbar .navbar-toggler {
-  border-color: var(--primary-color);
+  border-color: #000e8a;
 }
-
 .navbar .navbar-toggler-icon {
   filter: brightness(0) invert(0);
 }
@@ -537,4 +240,142 @@ article.card {
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+}
+
+section {
+  background-color: rgba(128, 140, 255, 0.5019607843);
+  margin: 1rem 1rem 2.5rem 1rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  border-style: solid none none solid;
+  border-color: #000e8a;
+}
+
+.contenedor-seccion {
+  display: grid;
+  grid-area: contenedor-seccion;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-seccion {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .contenedor-seccion {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+footer {
+  background-color: #000e8a;
+  color: rgba(231, 232, 254, 0.9176470588);
+  padding: 1rem;
+  margin: 0rem 1rem 1rem 1rem;
+  text-align: center;
+  border-radius: 0.8rem;
+}
+
+footer > p {
+  margin: 15px 0;
+  text-align: right;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(229, 232, 255, 0.5019607843);
+  border-radius: 0.8rem;
+  margin: 1rem;
+  padding: 20px;
+  border-style: none solid solid none;
+  border-color: #000e8a;
+}
+
+article.card {
+  background-color: rgba(229, 232, 255, 0.5019607843);
+  border-radius: 0.8rem;
+  border-width: 0 3px 3px 0;
+  border-style: none solid solid none;
+  border-color: #000e8a;
+}
+
+article p {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #000e8a;
+}
+
+.bullet {
+  position: relative;
+  padding-left: 25px;
+}
+.bullet::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.lista-ordenada {
+  counter-reset: item;
+}
+.lista-ordenada p {
+  counter-increment: item;
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 15px;
+}
+.lista-ordenada p::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  width: 30px;
+  text-align: right;
+}
+
+a {
+  color: #000e8a;
+  font-weight: 500;
+  text-decoration: underline dotted;
+}
+a:hover {
+  color: #0753c5;
+  text-decoration: underline solid;
+}
+
+article > a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #000e8a;
+  margin-top: 0.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
 }

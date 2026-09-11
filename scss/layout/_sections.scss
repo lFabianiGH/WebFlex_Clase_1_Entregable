@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+// Secciones
+
+section {
+    background-color: $color-fondo-section;
+    margin: 1rem 1rem 2.5rem 1rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border-style: solid none none solid;
+    border-color: $color-primario;
+}
+
+// Contenedor de secciones
+
+.contenedor-seccion {
+    display: grid;
+    grid-area: contenedor-seccion;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+// Responsive
+
+@media (min-width: 768px) {
+
+    .contenedor-seccion {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contenedor-seccion {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}

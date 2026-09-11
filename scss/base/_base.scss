@@ -1,0 +1,22 @@
+// ==============================
+// Estilos base
+// ==============================
+
+// Uses
+@use "../utilities/variables" as *;
+
+// Reset básico
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+// Elementos globales
+
+body {
+    background-color: $color-fondo-claro;
+}
+

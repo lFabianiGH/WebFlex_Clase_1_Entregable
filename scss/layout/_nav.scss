@@ -1,0 +1,98 @@
+// Uses
+
+@use "../utilities/variables" as *;
+
+// Navegación
+
+nav {
+    background-color: $color-fondo-nav;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    padding: 15px;
+    border-style: solid none solid none;
+    border-width: 3px;
+}
+
+nav>ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+nav>ul>li {
+    display: block;
+    list-style: none;
+    border-radius: 0.2rem;
+}
+
+// Responsive
+
+@media (min-width: 768px) {
+
+    nav>ul {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+    }
+
+    nav>ul>li {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1024px) {
+
+
+    nav > ul {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.5rem;
+    }
+
+    nav > ul > li {
+        text-align: center;
+    }
+
+    .navbar .navbar-collapse {
+        justify-content: flex-end;
+    }
+}
+
+// Integración con Bootstrap
+
+.navbar {
+    padding: 0.5rem 0;
+
+    .nav-link {
+        color: $color-primario;
+        font-weight: 500;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            color: $color-primario;
+            background-color: $color-fondo-hover;
+        }
+
+        &:active {
+            color: $color-secundario;
+            background-color: $color-fondo-active;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: $color-primario;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(0);
+    }
+
+}
+
+.navbar-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+}

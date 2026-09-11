@@ -1,0 +1,83 @@
+// Uses
+//@use "../utilities/variables" as *;
+
+// Tipografía
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+// Textos planos
+
+.texto-plano {
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.texto-plano-centrado {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+.texto-plano-justificado {
+    text-align: justify;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1rem;
+}
+
+// Responsive
+
+@media (min-width: 768px) {
+
+    .texto-plano {
+        font-size: 1rem;
+        font-weight: 450;
+    }
+
+    .texto-plano-centrado {
+        font-size: 1rem;
+        font-weight: 450;
+    }
+
+    .texto-plano-justificado {
+        font-size: 1rem;
+        font-weight: 450;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .texto-plano {
+        font-size: 1rem;
+        font-weight: 550;
+    }
+
+    .texto-plano-centrado {
+        display: block;
+        font-size: 1rem;
+        font-weight: 550;
+    }
+
+    .texto-plano-justificado {
+        display: block;
+        font-size: 1rem;
+        font-weight: 550;
+    }
+}

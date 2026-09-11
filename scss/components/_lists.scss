@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+
+// Lista con viñetas
+
+.bullet {
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: $color-negro;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+// Lista ordenada personalizada
+
+.lista-ordenada {
+    counter-reset: item;
+
+    p {
+        counter-increment: item;
+        position: relative;
+        padding-left: 45px;
+        margin-bottom: 15px;
+
+        &::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: $color-negro;
+            width: 30px;
+            text-align: right;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@use "../utilities/variables" as *;
+
+// Header principal
+
+header {
+    background: linear-gradient(
+        $color-gradiente-desde,
+        $color-gradiente-hasta
+    );
+    color: $color-primario;
+    padding: 1rem;
+    margin: 1rem;
+    border-bottom: 5px;
+    border-radius: 0.8rem;
+
+    h1 {
+        color: $color-secundario;
+    }
+}
+
+// Contenedor de identidad
+
+.contenedor-identidad {
+    display: grid;
+    grid-area: contenedor-identidad;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "logo"
+        "texto-logo";
+    align-items: grid-end;
+    gap: 1rem;
+}
+
+// Elementos de identidad
+
+.logo {
+    grid-area: logo;
+}
+
+.texto-logo {
+    grid-area: texto-logo;
+}
+
+// Contenedor general del header
+
+.contenedor-header {
+    display: grid;
+    grid-area: contenedor-header;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "contenedor-identidad"
+        "contenedor-nav";
+    align-items: grid-end;
+    gap: 1rem;
+}
+
+// Contenedor de navegación
+
+.contenedor-nav {
+    grid-area: contenedor-nav;
+}
+
+// Texto del header
+
+p.texto-header {
+    font-size: 0.8rem;
+    background-color: $color-fondo-texto-header;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    padding: 9px;
+    border-radius: 0.5rem;
+    border-style: solid none solid none;
+    border-width: 3px;
+}
+
+// Responsive
+
+@media (min-width: 768px) {
+
+    .contenedor-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "contenedor-identidad"
+            "contenedor-nav";
+    }
+
+    .contenedor-identidad {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "logo texto-logo";
+    }
+
+    p.texto-header {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .contenedor-header {
+        grid-template-columns: 3fr minmax(550px, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "contenedor-identidad contenedor-nav";
+    }
+
+    .contenedor-identidad {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "logo texto-logo";
+    }
+
+    p.texto-header {
+        font-size: 1.2rem;
+    }
+}
+
+// Integración con Bootstrap
+
+.contenedor-header {
+    display: block;
+}
