@@ -1,4 +1,5 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 // Enlaces
 
@@ -14,9 +15,7 @@ a {
 }
 
 article > a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-columna-centrado;
     width: 100%;
     height: 100%;
 }

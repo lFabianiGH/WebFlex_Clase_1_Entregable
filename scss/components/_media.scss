@@ -1,11 +1,11 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
 
 // Elementos multimedia
 
 figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-columna-centrado;
     margin: 1rem;
 }
 
