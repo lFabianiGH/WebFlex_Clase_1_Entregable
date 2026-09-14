@@ -2,25 +2,36 @@
 
 // Cards
 
-article {
-    display: flex;
-    flex-direction: column;
+%card-base {
     background-color: $color-fondo-article;
     border-radius: 0.8rem;
-    margin: 1rem;
-    padding: 20px;
     border-style: none solid solid none;
     border-color: $color-primario;
+}
+
+
+article {
+    @extend %card-base;
+
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 20px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 }
 
 // Integración con Bootstrap
 
 article.card {
-    background-color: $color-fondo-article;
-    border-radius: 0.8rem;
+    @extend %card-base;
+
     border-width: 0 3px 3px 0;
-    border-style: none solid solid none;
-    border-color: $color-primario;
 }
 
 // Texto de las cards

@@ -4,8 +4,8 @@
 
 section {
     background-color: $color-fondo-section;
-    margin: 1rem 1rem 2.5rem 1rem;
-    padding: 1rem;
+    margin: $espaciado-base $espaciado-base ($espaciado-base * 2.5) $espaciado-base;
+    padding: $espaciado-base;
     border-radius: 0.8rem;
     border-style: solid none none solid;
     border-color: $color-primario;

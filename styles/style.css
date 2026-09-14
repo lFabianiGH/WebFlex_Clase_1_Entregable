@@ -284,23 +284,27 @@ footer > p {
   text-align: right;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
+article.card, article {
   background-color: rgba(229, 232, 255, 0.5019607843);
   border-radius: 0.8rem;
-  margin: 1rem;
-  padding: 20px;
   border-style: none solid solid none;
   border-color: #000e8a;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 article.card {
-  background-color: rgba(229, 232, 255, 0.5019607843);
-  border-radius: 0.8rem;
   border-width: 0 3px 3px 0;
-  border-style: none solid solid none;
-  border-color: #000e8a;
 }
 
 article p {
@@ -357,6 +361,7 @@ article > a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
   width: 100%;
   height: 100%;
 }
@@ -365,6 +370,7 @@ figure {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
   margin: 1rem;
 }
 
@@ -378,4 +384,8 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.03);
 }

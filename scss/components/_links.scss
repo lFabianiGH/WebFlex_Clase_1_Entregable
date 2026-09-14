@@ -14,8 +14,8 @@ a {
     }
 }
 
-article > a {
-    @include flex-columna-centrado;
+article>a {
+    @include flex-columna(center, 0.5rem);
     width: 100%;
     height: 100%;
 }
