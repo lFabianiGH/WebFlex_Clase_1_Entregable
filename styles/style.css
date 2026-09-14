@@ -24,7 +24,9 @@ p {
   line-height: normal;
 }
 
-.texto-plano {
+.texto-plano,
+.texto-plano-centrado,
+.texto-plano-justificado {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: normal;
@@ -33,48 +35,30 @@ p {
 
 .texto-plano-centrado {
   text-align: center;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 1rem;
 }
 
 .texto-plano-justificado {
   text-align: justify;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: normal;
-  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .texto-plano {
-    font-size: 1rem;
-    font-weight: 450;
-  }
-  .texto-plano-centrado {
-    font-size: 1rem;
-    font-weight: 450;
-  }
+  .texto-plano,
+  .texto-plano-centrado,
   .texto-plano-justificado {
     font-size: 1rem;
     font-weight: 450;
   }
 }
 @media (min-width: 1024px) {
-  .texto-plano {
+  .texto-plano,
+  .texto-plano-centrado,
+  .texto-plano-justificado {
     font-size: 1rem;
     font-weight: 550;
   }
-  .texto-plano-centrado {
-    display: block;
-    font-size: 1rem;
-    font-weight: 550;
-  }
+  .texto-plano-centrado,
   .texto-plano-justificado {
     display: block;
-    font-size: 1rem;
-    font-weight: 550;
   }
 }
 header {
