@@ -40,7 +40,9 @@ El CSS utilizado por el sitio es el resultado de la compilación de los archivos
 
 ### Sass / SCSS
 
-La hoja de estilos fue refactorizada utilizando una arquitectura basada en **partials**, variables, mixins, nesting y el operador `&`.
+La hoja de estilos fue desarrollada utilizando una arquitectura modular basada en **partials**, variables, mixins parametrizados, nesting, operadores y `@extend`.
+
+Los estilos reutilizables se organizan mediante variables, mixins y placeholders, evitando duplicación de código y manteniendo separadas las responsabilidades de cada módulo.
 
 La estructura principal es:
 
@@ -84,9 +86,21 @@ El proyecto utiliza fuentes externas mediante Google Fonts, incluyendo Montserra
 
 ## 📱 Diseño responsive
 
-El sitio incorpora diseño adaptable mediante **CSS Grid, Flexbox y media queries**, permitiendo reorganizar los contenidos según el tamaño de pantalla.
+Las cinco páginas del sitio cuentan con un diseño responsive desarrollado mediante **CSS Grid, Flexbox, Bootstrap y media queries**.
 
-La navegación y las distintas secciones se adaptan a dispositivos de diferentes resoluciones.
+La distribución del contenido se adapta progresivamente a diferentes resoluciones, reorganizando las secciones y sus componentes para su visualización en dispositivos móviles, tablets y pantallas de escritorio.
+
+Se utilizan breakpoints propios mediante media queries, además del comportamiento responsive proporcionado por determinados componentes de Bootstrap.
+
+## ✨ Animaciones e interacción
+
+El proyecto incorpora animaciones sutiles mediante diferentes técnicas.
+
+Se utilizan **transiciones CSS** para generar respuestas visuales durante la interacción del usuario, incluyendo efectos de desplazamiento y sombra sobre las cards y un leve aumento de escala sobre las imágenes.
+
+Además, se integra la librería **AOS (Animate On Scroll)** mediante CDN para animar progresivamente la aparición de secciones y determinados bloques de contenido durante el desplazamiento por las páginas.
+
+La utilización de animaciones busca complementar la navegación sin modificar la estructura ni interferir con el comportamiento responsive del sitio.
 
 ## 📁 Estructura del proyecto
 

@@ -18,9 +18,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-        
+    <!--Conexión con AOS (Animate On Scroll)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>Lucas' lair - Sobre mí</title>
 </head>
+
 
 <body>
     <header>
@@ -28,13 +31,13 @@
             <div class="container">
                 <div class="contenedor-identidad">
                     <img class="logo" src="../assets/img/caverna.jpg" alt="Logo de Lucas' lair">
-    
+
                     <div class="texto-logo">
                         <h1>Lucas' lair</h1>
                         <p class="texto-header">Código, tecnología y mates... MUCHOS MATES</p>
                     </div>
                 </div>
-                
+
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
                     aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -71,23 +74,28 @@
 
 
     <main>
-        <section>
+        <section data-aos="fade-up">
             <article>
                 <h2>Qué estudié</h2>
-                <p class="texto-plano-justificado">Estudié en el Instituto Superior de Formación Docente y Técnica Nº57, donde obtuve el
+                <p class="texto-plano-justificado">Estudié en el Instituto Superior de Formación Docente y Técnica Nº57,
+                    donde obtuve el
                     título de Analista de Sistemas.
                     Durante mi formación académica, adquirí conocimientos sólidos en programación,
                     bases de datos, y gestión de proyectos.</p>
-                <p class="texto-plano-justificado">Además, me he mantenido actualizado con las últimas tendencias tecnológicas
+                <p class="texto-plano-justificado">Además, me he mantenido actualizado con las últimas tendencias
+                    tecnológicas
                     y he participado en diversos proyectos que me han permitido aplicar mis habilidades
                     en entornos reales.
                 </p>
-                <p class="texto-plano-justificado">Mi experiencia laboral se orientó hacia la docencia y la práctica contable ambas en
+                <p class="texto-plano-justificado">Mi experiencia laboral se orientó hacia la docencia y la práctica
+                    contable ambas en
                     el ámbito de la administración pública, sumado a experiencias en el ámbito tecnológico
                     del sector privado</p>
-                <p class="texto-plano-justificado">Actualmente, me desempeño como docente y analista de sistemas, combinando mi pasión
+                <p class="texto-plano-justificado">Actualmente, me desempeño como docente y analista de sistemas,
+                    combinando mi pasión
                     por la tecnología con mi vocación por la enseñanza.</p>
-                <p class="texto-plano-justificado">Si quieres conocer más sobre mi trayectoria profesional y mis proyectos,
+                <p class="texto-plano-justificado">Si quieres conocer más sobre mi trayectoria profesional y mis
+                    proyectos,
                     no dudes en contactarme.</p>
                 <figure>
                     <img src="../assets/img/foto-lf-carpinteria.jpg" alt="Foto Lucas Fabiani">
@@ -97,14 +105,17 @@
 
             <article>
                 <h2>Qué hago ahora</h2>
-                <p class="texto-plano-justificado">Actualmente, la mitad del tiempo de trabajo estoy llevando adelante en varios proyectos
+                <p class="texto-plano-justificado">Actualmente, la mitad del tiempo de trabajo estoy llevando adelante
+                    en varios proyectos
                     relacionados con el desarrollo web y la enseñanza de programación en el ámbito privado
                     y público. Me enfoco en crear soluciones innovadoras que faciliten la vida de las personas y
                     promuevan el aprendizaje de nuevas habilidades tecnológicas.</p>
-                <p class="texto-plano-justificado">Mi objetivo es seguir creciendo profesionalmente y contribuir al desarrollo
+                <p class="texto-plano-justificado">Mi objetivo es seguir creciendo profesionalmente y contribuir al
+                    desarrollo
                     tecnológico de mi comunidad.
                 </p>
-                <p class="texto-plano-justificado">Eso sí, acompañado de mi mate y mi termo (hay cosas que no se negocian).</p>
+                <p class="texto-plano-justificado">Eso sí, acompañado de mi mate y mi termo (hay cosas que no se
+                    negocian).</p>
             </article>
         </section>
     </main>
@@ -126,6 +137,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+        
+    <!-- Conexión con AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+    </script>
 </body>
 
 </html>
