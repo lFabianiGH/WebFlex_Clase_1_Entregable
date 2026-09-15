@@ -4,9 +4,9 @@ Portafolio web personal desarrollado como proyecto del curso **Desarrollador Web
 
 ## 🌐 Sitio web
 
-**Sitio desplegado en GitHub Pages:**
+**Sitio desplegado en Vercel:**
 
-https://lfabianigh.github.io/WebFlex_Clase_1_Entregable/
+https://lucaslair.vercel.app/
 
 ## 📌 Descripción
 
