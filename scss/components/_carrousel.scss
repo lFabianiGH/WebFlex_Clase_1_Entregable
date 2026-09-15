@@ -1,0 +1,11 @@
+// Personalización del carrusel
+
+.carousel-control-prev,
+.carousel-control-next {
+    &:hover {
+        background: radial-gradient(circle,
+                rgba(3, 5, 112, 0.6) 0%,
+                rgba(81, 70, 236, 0.8) 10%,
+                rgba(3, 5, 112, 0) 20%);
+    }
+}

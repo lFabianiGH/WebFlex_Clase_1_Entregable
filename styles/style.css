@@ -70,7 +70,7 @@ header {
   border-radius: 0.8rem;
 }
 header h1 {
-  color: rgba(231, 232, 254, 0.9176470588);
+  color: #003a8f;
 }
 
 .contenedor-identidad {
@@ -337,7 +337,7 @@ a {
   text-decoration: underline dotted;
 }
 a:hover {
-  color: #0753c5;
+  color: #003a8f;
   text-decoration: underline solid;
 }
 
@@ -372,4 +372,15 @@ img {
 }
 img:hover {
   transform: scale(1.03);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: radial-gradient(circle, rgba(3, 5, 112, 0.6) 0%, rgba(81, 70, 236, 0.8) 10%, rgba(3, 5, 112, 0) 20%);
+}
+
+
+.accordion {
+    width: 600px;
+    margin: 0 auto;
 }
