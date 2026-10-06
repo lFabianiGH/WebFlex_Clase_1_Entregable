@@ -64,7 +64,9 @@ scss/
     ├── _cards.scss
     ├── _links.scss
     ├── _lists.scss
-    └── _media.scss
+    ├── _media.scss
+    ├── _carrousel.scss
+    └── _accordion.scss
 ```
 
 `main.scss` funciona como único punto de entrada y utiliza `@use` para organizar los distintos módulos.
@@ -114,11 +116,26 @@ WebFlex_Clase_1_Entregable/
 │   ├── servicios.html
 │   └── sobre-mi.html
 ├── scss/
+│   ├── 
 │   ├── main.scss
 │   ├── utilities/
+│   │   ├──  _variables.scss
+│   │   └── _mixins.scss
 │   ├── base/
+│   │   ├── _base.scss
+│   │   └── _tipografia.scss
 │   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _nav.scss
+│   │   ├── _sections.scss
+│   │   └── _footer.scss
 │   └── components/
+│       ├── _cards.scss
+│       ├── _links.scss
+│       ├── _lists.scss
+│       ├── _media.scss
+│       ├── _carrousel.scss
+│       └── _accordion.scss
 ├── styles/
 │   └── style.css
 ├── index.html
@@ -152,6 +169,6 @@ El sitio dispone de diferentes medios de contacto, incluyendo correo electrónic
 
 Para conocer los medios disponibles, consultar la sección **Contacto** del sitio.
 
-## 📄 Licencia
+## 🎓 Propósito del proyecto
 
 Proyecto desarrollado con fines educativos y como parte del proceso de aprendizaje del curso **Desarrollador Web Flex**.
