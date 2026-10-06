@@ -42,19 +42,6 @@ header {
     grid-area: texto-logo;
 }
 
-// Contenedor general del header
-
-.contenedor-header {
-    display: grid;
-    grid-area: contenedor-header;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-        "contenedor-identidad"
-        "contenedor-nav";
-    align-items: grid-end;
-    gap: 1rem;
-}
 
 // Contenedor de navegación
 
@@ -80,14 +67,6 @@ p.texto-header {
 
 @media (min-width: 768px) {
 
-    .contenedor-header {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        grid-template-areas:
-            "contenedor-identidad"
-            "contenedor-nav";
-    }
-
     .contenedor-identidad {
         grid-template-columns: auto 1fr;
         grid-template-rows: 1fr;
@@ -102,13 +81,6 @@ p.texto-header {
 
 @media (min-width: 1024px) {
 
-    .contenedor-header {
-        grid-template-columns: 3fr minmax(550px, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "contenedor-identidad contenedor-nav";
-    }
-
     .contenedor-identidad {
         grid-template-columns: auto 1fr;
         grid-template-rows: 1fr;
@@ -119,10 +91,4 @@ p.texto-header {
     p.texto-header {
         font-size: 1.2rem;
     }
-}
-
-// Integración con Bootstrap
-
-.contenedor-header {
-    display: block;
 }
